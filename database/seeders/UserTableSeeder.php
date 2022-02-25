@@ -15,24 +15,24 @@ class UserTableSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('users')->insert([
-            'first_name'    => 'Donald',
-            'last_name'     => 'Duck',
-            'email'         => 'donald.duck@codegorilla.nl',
-            'password'      => bcrypt('Gorilla1!'),
-            'created_at'    => now(),
-            'created_by'    => 1, 
-        ]);
+        // \App\Models\User::create([
+        //     'first_name'    => 'Donald',
+        //     'last_name'     => 'Duck',
+        //     'email'         => 'donald.duck@codegorilla.nl',
+        //     'password'      => bcrypt('Gorilla1!'),
+        //     'created_at'    => now(),
+        //     'created_by'    => 1, 
+        // ]);
 
-        DB::table('users')->insert([
-            'first_name'    => 'Katrien',
-            'last_name'     => 'Duck',
-            'email'         => 'katrien.duck@codegorilla.nl',
-            'password'      => bcrypt('Gorilla1!'),
-            'created_at'    => now(),
-            'created_by'    => 1,
-        ]);
+        // \App\Models\User::create([
+        //     'first_name'    => 'Katrien',
+        //     'last_name'     => 'Duck',
+        //     'email'         => 'katrien.duck@codegorilla.nl',
+        //     'password'      => bcrypt('Gorilla1!'),
+        //     'created_at'    => now(),
+        //     'created_by'    => 1,
+        // ]);
 
-        \App\Models\User::factory(50)->create();
+        \App\Models\User::factory(10)->create();
     }
 }
