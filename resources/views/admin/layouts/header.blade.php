@@ -8,7 +8,7 @@
                 <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
                     aria-expanded="false">Dropdown</a>
                 <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Users</a></li>
+                    <li><a class="dropdown-item" href="{{ route('admin.users.index') }}">Users</a></li>
                     <li><a class="dropdown-item" href="#">Products & Categories</a></li>
                     <li><a class="dropdown-item" href="#">Orders</a></li>
                     <li><a class="dropdown-item" href="#">Invoices</a></li>
