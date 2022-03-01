@@ -11286,3 +11286,14 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+.cart {
+  background-color: pink;
+}
+
+.item {
+  background-color: purple;
+}
+
+.box {
+  width: 120px;
+}
