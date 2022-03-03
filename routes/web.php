@@ -28,3 +28,8 @@ Route::middleware('auth')->prefix('admin')->group(function() {
 });
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::middleware('auth')->group(function() {
+    Route::get('my-account', [\App\Http\Controllers\MyAccountController::class, 'show'])->name('my-account.show');
+    Route::get('orders', [App\Http\Controllers\MyOrderController::class, 'index'])->name('orders.index');
+});

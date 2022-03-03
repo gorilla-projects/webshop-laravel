@@ -25,12 +25,10 @@
 
 <body>
     <div id="app">
-        <div class="container-fluid">
-            <div class="row">
-                <main>
-                    @yield('content')
-                </main>
-            </div>
+        <div class="container-fluid p-0">
+            <main>
+                @yield('content')
+            </main>
         </div>
     </div>
 </body>
