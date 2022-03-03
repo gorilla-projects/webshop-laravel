@@ -10,7 +10,11 @@ class AdminController extends Controller
 {
     public function index()
     {
-        return view('admin.index');
+        if (Auth()->user()->hasRole('SUPER_ADMIN')) {
+            return view('admin.index');
+        }
+
+        return view('my-account');
     }
 
     /**

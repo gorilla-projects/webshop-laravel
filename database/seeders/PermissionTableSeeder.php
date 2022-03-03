@@ -87,7 +87,7 @@ class PermissionTableSeeder extends Seeder
                 'created_by'        => 1,
             ]);
 
-            // $user->assignRole('ADMIN');
+            $user->assignRole('ADMIN');
 
             $user = \App\Models\User::factory()->create([
                 'first_name'        => 'Customer',
@@ -99,7 +99,7 @@ class PermissionTableSeeder extends Seeder
                 'created_by'        => 1,
             ]);
 
-            // $user->assignRole('CUSTOMER');
+            $user->assignRole('CUSTOMER');
         } catch (Exception $e) {
             dd($e->getMessage());
         }
