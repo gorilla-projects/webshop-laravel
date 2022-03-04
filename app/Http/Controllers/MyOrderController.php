@@ -9,9 +9,8 @@ class MyOrderController extends Controller
 {
     public function index()
     {
-        dd(Auth()->user()->orders);
         return view('orders', [
-            'orders'    => Auth()->user()->orders(),
+            'orders' => Auth()->user()->orders,
         ]);
     }
 }

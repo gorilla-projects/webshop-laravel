@@ -15,8 +15,12 @@ return new class extends Migration
     {
         Schema::create('products', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('brand_id');
+            $table->foreign('brand_id')->references('id')->on('brands');
             $table->string('name');
             $table->text('description')->nullable();
+            $table->decimal('price');
+            $table->decimal('vat')->default(21);
             $table->timestamps();
             $table->softDeletes();
 
@@ -34,7 +38,7 @@ return new class extends Migration
             $table->foreign('product_id')->references('id')->on('products');
             $table->enum('media_type', ['image', 'video'])->default('image');
             $table->string('file_name');
-            $table->text('description');
+            $table->text('description')->nullable();
             $table->timestamps();
             $table->softDeletes();
 
