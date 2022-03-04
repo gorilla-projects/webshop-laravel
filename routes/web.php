@@ -25,6 +25,10 @@ Route::middleware('auth')->prefix('admin')->group(function() {
     Route::get('/', [App\Http\Controllers\Admin\AdminController::class, 'index'])->name('admin');
     Route::get('logout', [App\Http\Controllers\Admin\AdminController::class, 'logout'])->name('admin.logout');
     Route::resource('users', App\Http\Controllers\Admin\UserController::class)->names('admin.users');
+    Route::resource('products', \App\Http\Controllers\Admin\ProductController::class)->names('admin.products');
+    Route::resource('brands', \App\Http\Controllers\Admin\BrandController::class)->names('admin.brands');
+    Route::resource('orders', \App\Http\Controllers\Admin\OrderController::class)->names('admin.orders');
+    Route::resource('invoices', \App\Http\Controllers\Admin\InvoiceController::class)->names('admin.invoices');
 });
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

@@ -9,9 +9,10 @@
                     aria-expanded="false">Dropdown</a>
                 <ul class="dropdown-menu">
                     <li><a class="dropdown-item" href="{{ route('admin.users.index') }}">Users</a></li>
-                    <li><a class="dropdown-item" href="#">Products & Categories</a></li>
-                    <li><a class="dropdown-item" href="#">Orders</a></li>
-                    <li><a class="dropdown-item" href="#">Invoices</a></li>
+                    <li><a class="dropdown-item" href="{{ route('admin.products.index') }}">Products & Categories</a></li>
+                    <li><a class="dropdown-item" href="{{ route('admin.brands.index') }}">Brands</a></li>
+                    <li><a class="dropdown-item" href="{{ route('admin.orders.index') }}">Orders</a></li>
+                    <li><a class="dropdown-item" href="{{ route('admin.invoices.index') }}">Invoices</a></li>
 
                     <li>
                         <hr class="dropdown-divider">
