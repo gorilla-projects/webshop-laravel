@@ -2,6 +2,7 @@
 
 @section('content')
     <form method="{{ $method }}" action="{{ $action }}" autocomplete="off">
+        @csrf
         <div class="container-fluid">
             <h3 class="mt-3">{{ $method == 'PUT' ? "Edit" : "Create" }} user</h3>
             <div class="row">
