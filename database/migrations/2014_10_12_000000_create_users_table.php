@@ -81,5 +81,7 @@ return new class extends Migration
     public function down()
     {
         Schema::dropIfExists('users');
+        Schema::dropIfExists('user_addresses');
+        Schema::dropIfExists('user_phones');
     }
 };

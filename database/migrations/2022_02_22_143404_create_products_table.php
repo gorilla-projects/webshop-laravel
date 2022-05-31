@@ -113,5 +113,11 @@ return new class extends Migration
     public function down()
     {
         Schema::dropIfExists('products');
+        Schema::dropIfExists('product_media');
+        Schema::dropIfExists('product_categories');
+        Schema::dropIfExists('product_has_categories');
+        Schema::dropIfExists('product_specs');
+        Schema::dropIfExists('product_has_specs');
+        Schema::dropIfExists('product_clicks');
     }
 };
