@@ -27,7 +27,10 @@ class UserController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.users.create', [
+            'method'    => 'POST',
+            'action'    => route('admin.users.store'),
+        ]);
     }
 
     /**
@@ -38,7 +41,7 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        
     }
 
     /**
@@ -63,7 +66,9 @@ class UserController extends Controller
     public function edit(User $user)
     {
         return view('admin.users.edit', [
-            'user'  => $user,
+            'user'      => $user,
+            'method'    => 'PUT',
+            'action'    => route('admin.users.update', $user),
         ]);
     }
 
